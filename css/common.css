@@ -13,7 +13,7 @@
   --clr-primary-orange: linear-gradient(135deg, #FF9100D2, #9D6307);
   --clr-primary-grey: #313131;
   --clr-text: #E9E9E9;
-  --mgn-left: 7rem;
+  --mgn-left: 1.8rem;
   --flt-cntrst: 110%;
   --mgn-mobile-left:3rem;
 
@@ -39,7 +39,6 @@ nav {
   width: 100%;
   height: 100%;
   transition: all 500ms ease;
-  
 }
 /*_____________________________________*/
 /*           LOGO DESIGNING            */
@@ -82,16 +81,19 @@ nav {
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  width: 40%;
+  width: 20%;
   padding:0 2em;
-  margin: 3em;
+  margin-right:var(--mgn-left);
   color: var(--clr-text);
   opacity: 1;
   display: none;
-  
 }
 .nav-list li{
   list-style: none;
+  width: 100%;
+  transform: translateX(77%);
+
+  
 }
 .nav-links{
   text-decoration: none;
@@ -128,15 +130,16 @@ transition: all 250ms ease;
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  width: 40%;
+  width: 30%;
   padding:0 2em;
-  margin: 3em;
+    margin-right:var(--mgn-left);
+
   animation: nav-link-expander 500ms ease-in;
 
 }
+
 .nav-link-expand{
     animation: nav-link-expander 500ms ease-in;
-
 }
 
 .logo-mobile{
@@ -148,22 +151,32 @@ transition: all 250ms ease;
 @keyframes nav-link-expander {
   0% {
     transform:scale(1);
-    opacity: 0;}
+    opacity: 0;
+    
+  }
   25% {
     transform:scale(1);
-    opacity:0.5;}
+    opacity:0.5;
+    
+  }
   
   50% {
     transform:scale(1.1);
-    opacity: 1;}
+    opacity: 1;
+    
+  }
   
   %75{
         transform:scale(1.1);
-        opacity: 1;}
+        opacity: 1;
+    
+  }
   
   100% {
     transform: scale(1);
-    opacity: 1;}
+    opacity: 1;
+    
+  }
 }
 @media (max-width: 767.98px)
 {
@@ -177,6 +190,13 @@ transition: all 250ms ease;
   body{
     background: black;
   }
+  .nav-list li{
+    transform: 0 0;
+  }
+  .nav-list li{
+    transform: translateX(0%);
+  }
+  
   nav{
    flex-direction: column;
     justify-content: space-around;
@@ -248,8 +268,7 @@ transition: all 250ms ease;
   .nav-links{
     color: gold;
     font-size: 14px;
-
-    
+    background: red;
   }
   .logo{
     position: fixed;
@@ -339,6 +358,7 @@ transition: all 250ms ease;
   margin-bottom: 5rem;
   order: 1;
   opacity: 1;
+  transform: translate(-55% ,10%);
   }
  .nav-link-expand{
    animation-name: nav-link-expander 150ms ease-in;

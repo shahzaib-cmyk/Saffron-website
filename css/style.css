@@ -27,7 +27,6 @@ main{
   letter-spacing: 1px;
   text-shadow: 1px 1px 3px black;
   position: relative;
-  background-position:15px 0;
   margin-top: -20px;
   filter: contrast(var(--flt-cntrst));
 
@@ -48,7 +47,7 @@ main{
   top: 12%;
   bottom: 10%;
   left: -20%;
-  right: 109%;
+  right: 101%;
   background:var(--clr-primary-grey);
   
 }
@@ -153,9 +152,9 @@ main {
   height: 100vh;
   width: 100vw;
   background-size: cover;
-  background-position:-275px -30px;
+  background-position:51.9% 0;
   -webkit-background-size: 250%;
-  background-size:250%;
+  background-size:200%;
   background-repeat: no-repeat;
 }
 .content{
@@ -173,6 +172,10 @@ width: 80vw;
 .temp{
       background:linear-gradient(10deg,#FF9100E8 10%,transparent 10%,transparent 18%,#FF9100E8 18%,#9D6307 55%,transparent 55%,transparent 87%,#FF9100D2 87%,#FF9100D2 100%,transparent 100%);
 
+}
+.content::before{
+
+  right: 105%;
 }
 .btns{
     border-radius: 10px;
